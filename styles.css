@@ -31,8 +31,7 @@ html {
   height: 90vh;
   border: 1px solid white;
   border-radius: 40px;
-
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 #frame_header {
@@ -41,12 +40,15 @@ html {
   justify-content: space-between;
   margin-bottom: 20px;
   padding: 24px 40px;
+  border-bottom: 1px solid white;
+  width: 100%;
 }
 
 #frame_filters {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -62,7 +64,7 @@ html {
 }
 
 .btn > h1 {
-  font-size: 20px;
+  font-size: 25px;
   font-family: sans-serif;
 }
 
@@ -73,6 +75,7 @@ html {
 
 #list_items {
   overflow-y: scroll;
+  overflow-x: hidden;
   height: 85%;
 }
 
