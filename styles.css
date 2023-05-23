@@ -126,6 +126,12 @@ html {
   padding: 18px;
   font-family: sans-serif;
   margin-right: 20px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
 }
 
 .item_wrapper > .btn {
