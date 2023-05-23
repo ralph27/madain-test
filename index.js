@@ -5,16 +5,6 @@ let filters = []
 let items
 
 buttons.forEach((btn, index) => {
-  btn.addEventListener('mouseenter', () => {
-    btn.style.backgroundColor = 'white'
-    btn.style.color = 'black'
-  })
-
-  btn.addEventListener('mouseleave', () => {
-    btn.style.backgroundColor = 'black'
-    btn.style.color = 'white'
-  })
-
   btn.addEventListener('click', (e) => {
     const index = filters.indexOf(e.currentTarget.textContent.trim())
     if (index > -1) {

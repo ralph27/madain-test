@@ -26,6 +26,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 #frame_filters {
@@ -39,6 +40,11 @@ html {
   padding: 10px 15px;
   border-radius: 30px;
   cursor: pointer;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
 }
 
 .btn > h1 {
@@ -56,10 +62,33 @@ html {
   align-items: center;
   border-bottom: 1px solid white;
   padding: 10px 0px;
-  margin: 30px 0px;
   opacity: 0;
   animation: fade_in 500ms ease-out forwards;
   font-family: sans-serif;
+  position: relative;
+  padding-right: 20px;
+}
+
+.item_wrapper::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, transparent, #106600, #20cc00);
+  z-index: -1;
+}
+
+.item_wrapper:hover::before {
+  width: 100%;
+  transition: width 600ms ease;
+}
+
+.item_wrapper:hover > .btn {
+  transition: all 200ms 500ms ease;
+  background-color: white;
+  color: black;
 }
 
 @keyframes fade_in {
