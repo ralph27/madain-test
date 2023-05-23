@@ -53,13 +53,13 @@ html {
 
 .item_wrapper {
   display: flex;
-  /* background-color: brown; */
   align-items: center;
   border-bottom: 1px solid white;
   padding: 10px 0px;
   margin: 30px 0px;
   opacity: 0;
   animation: fade_in 500ms ease-out forwards;
+  font-family: sans-serif;
 }
 
 @keyframes fade_in {
