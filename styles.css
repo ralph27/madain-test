@@ -4,6 +4,19 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 1);
+  border-radius: 50px;
+}
+
 html {
   height: 100vh;
   background-color: black;
@@ -18,8 +31,8 @@ html {
   height: 90vh;
   border: 1px solid white;
   border-radius: 40px;
-  padding: 24px 40px;
-  overflow-y: scroll;
+
+  overflow-y: hidden;
 }
 
 #frame_header {
@@ -27,6 +40,7 @@ html {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
+  padding: 24px 40px;
 }
 
 #frame_filters {
@@ -57,16 +71,20 @@ html {
   color: black !important;
 }
 
+#list_items {
+  overflow-y: scroll;
+  height: 85%;
+}
+
 .item_wrapper {
   display: flex;
   align-items: center;
   border-bottom: 1px solid white;
-  padding: 10px 0px;
   opacity: 0;
   animation: fade_in 500ms ease-out forwards;
   font-family: sans-serif;
   position: relative;
-  padding-right: 20px;
+  padding: 10px 40px;
 }
 
 .item_wrapper::before {
